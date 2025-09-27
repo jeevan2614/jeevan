@@ -1,5 +1,5 @@
-# jeevan
-activity 1
+# ACTIVITY 1
+
 USING MAN COMMAND 
 1)
 ls -b → Shows non-printable characters as octal escapes.
