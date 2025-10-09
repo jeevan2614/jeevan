@@ -1,0 +1,1210 @@
+                            Linux assignment -1
+
+                                        
+ 
+1.	What is Linux Operating System (OS)? List three pros and cons of it.
+
+Ans :- It is a free and open source operating system based on the linux
+And it can share charcterstices with the original unix  system
+
+Pros:-
+•	Source code is openly available
+•	It is permission based system,less vulnerable to viruses
+•	Change almost everthing about how the system looks
+
+Cons:-
+•	Commercial applications are not officially available,available  in unofficaially only.
+•	Not a beginner friendly,it is difficult to understand
+•	Without proper drivers ,device may not be work.
+
+
+2.	 Differentiate between Linux, Mac, Android, and Windows OS with at least six unique features.
+
+Ans:- 	 Linux :-
+•	It can be modify and distrubt the source code is freely available.
+•	Can use alternative like virtual machine
+•	It is good for servers,coding etc…
+•	It have a commercial software limatations like MS office,AutoCAD,etc……
+•	Servers and embedded devices it is the best choice
+•	Not good for gamers,designers,etc….
+
+
+Mac:-
+•	It cannot be modified and distrubt the source code because it is controlled by apple and Microsoft
+•	Built on a UNIX kernel
+•	Strict app store policies
+•	Stable and developer friendly
+•	Exlusive hardware runs only in apple devices like MacBook,etc…
+•	It is developer toolbox ,powerfull but it requires skill
+
+Android :-
+•	It is also closed -source code developed by google hence it cannot be modified and distrubt
+•	It is particularly designed for smartphones,tablets from various manufactures because hardware support
+•	It is designed for user-friendly mobile experience
+•	It designed for touchskreens,simple graphical interface,etc…
+•	It allow access vast libirary of applications from google play store
+•	World most usable mobile OS
+
+
+Windows :-
+•	It is also closed-source code developed by Microsoft hence it cannot be modified and distrubt
+•	Supporting a vide range of devices
+•	Particularly designed for personal computers,laptops,etc…
+•	Strict control on system behavior and appearance
+•	It made for user-friendly with little technical knowlodge
+•	Used in everyhwhere,particularly in offices and gaming
+
+
+3.	Why is Linux preferred for Mainframe Servers for legacy application? Give three out-of-the-box technical reasons. 
+
+Ans:- because
+•	It has a high stability and reliability ,its robust security architecture that can handle complex permission structures that essential for legacy software
+•	Its flexibility and customizability, ability to run on wide range of hardware,including older systems that also provide compatibility and functionality for older software
+•	Enchanced security and access control,it have multiple granular uer permission and multiple authentication methods and it prevents the unautharized changes or breaches
+
+
+4.	Explain the structure of the Linux File System with proper diagram. Note: you can use the tree command to find it out.
+
+Ans:- Daigram reprensentation of file system tree
+    /
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+├── lib
+├── lib64
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── run
+├── sbin
+├── srv
+├── tmp
+├── usr
+└── var
+•	Directories in linux
+
+	/ - starting point of the file system 
+	/root – the home directory for the root user
+	/tmp – temporary files created by users and applications
+	/lib – stores essential shared libraries required by programs
+	/opt – third party software packages
+	/run – stores volatile runtime data
+	/srv – holds data for services provided by the system
+	/dev – shows device flows
+	/var- variable data
+
+
+
+5.	If Linux OS is open-source, how do companies like Red Hat still making money from it? Do a market study and answer properly.
+Ans : -     companies making money by selling services,not by the software itself and also give with safe and tested version of linux 
+               companies they want a secure,reliable,and supported linux
+              Red hat earns money by subscriptions,training ,consulting,cloud         partnership 
+             Demand raising on hybrid IT,DevOps and secure system 
+            market is growing is fast estimately $100 billion by 2032
+
+
+6.	Write the command to display today’s date and time (i.e., current System time). 
+Ans:- date,time/T
+7.	Which command is used to check how long the system has been running? 
+
+Ans:- uptime
+
+8.	What is the difference between shutdown -h now and halt? 
+
+Ans:-   shutdown -h now  -- attempts to power off the machine after
+Halt – typically stops the CPU and leaves the system on
+
+
+9.	Compare init 0 and shutdown -h. Which is safer? Why? 
+
+Ans:-  shutdown -h safer than the init 0 because -h perform a more complete shutdown process by terminating all running process it execute in more gracefully and prepare the system for safe power off
+Init 0 not safe because it performs lower level operations and leads to data inconsistencies or corruption
+
+10. A system administrator accidentally powers off a Server machine without shutting it down properly. What problems can occur to the said Server? 
+
+Ans:-   file system corruption like data in RAM may not be written to disk 
+ unsaved  and in progress database transactions may be wased out
+they may be critical to restart correctly after reboot
+sudden power off cause stress to hard disk
+without proper shutdown lead to crashed files,lost data,etc……….4
+
+
+
+
+
+                          LINUX ASSINGNMENT  2
+
+
+
+1.	What does the command pwd, whoami, and hostname display?
+Ans:-      pwd  print working directory
+•	It shows the path of your current working directory
+
+                    Whoami  Who Am I
+•	It shows the current user logged into the system and it tells the which user account  is executing
+
+                   Hostname  name of the host computer
+•	Identify the machine you are integrating with.
+
+
+2.Write the command to create a directory named “project” inside the /home/student folder and keep three .txt file into it. Give output snapshot.
+
+Ans :-        command to create a directory named project given by:     
+                             mkdir /home/student/project
+                             touch /home/student/project/file1.txt
+                             touch /home/student/project/file2.txt
+                             touch /home/student/project/file3.txt
+   
+                            output snapshot given by:
+                                                     jeeva@kali:~$ mkdir /home/student/project
+                                                     jeeva@kali:~$ touch /home/student/project/file1.txt
+                                                     jeeva@kali  :~$ touch /home/student/project/file2.txt
+                                                      jeeva@kali  :~$ touch /home/student/project/file3.txt
+                                                       jeeva@kali:~$ ls -l /home/student/project/
+                                                         total 0
+                                                     -rw-rw-r-- 1 student student 0 Sep 24 21:11 file1.txt
+                                                       -rw-rw-r-- 1 student student 0 Sep 24 21:11 file2.txt
+                                                         -rw-rw-r-- 1 student student 0 Sep 2	4 21:11 file3.txt
+
+
+3.Explain the difference between absolute path and relative path with proper examples.
+
+Ans:-    1  ABSOLUTE PATH :- 
+•	 it provides the complete and clear location of directory
+•	Starting from the root directory
+•	It have the full or complete hierarchy of directories
+•	It does not change regardless of the current location 
+                       EXAMPLE :-
+                                  /home/user/documents/linux assignment.pdf
+
+                        2 RELATIVE PATH :-
+•	It shows the how to navigate from the current location to the target
+•	Not starting from the root directory
+•	In this case use special notations like     .    ,    ..     ,  etc…..
+•	It deponds on the current working directory
+                          EXAMPLE :-
+                             IN  ABOVE QUESTION EXAMPLE CONSIDERED
+                               ../documents/linux assignment.pdf
+
+
+ 4.What command will give you the already executed command traces in the terminal. Give output snapshot.
+Ans:-    command – history
+               
+1  sudo apt update && sudo apt upgrade
+2  --fix-missing
+3  sudo apt-
+4  sudo --fix-missing
+5  cat /etc/os-release
+6  sudo apt install -y virtualbox-guest-utils virtualbox-guest-x11
+7  sudo --fix-missing
+8  reboot
+9  sudo apt update && sudo apt upgrade -y
+10  sudo sub-process / usr/bin/dpkg
+11  sudo sub-process /usr/bin/dpkg
+12  sudo Sub-process /usr/bin/dpkg
+13  sudo apt update && sudo apt upgrade -y
+14  sudo apt --fix-broken install
+15  sudo sub-process /usr/bin/dpkkg
+16  sudo apt update && sudo apt upgrade -y
+17  reboot
+18  sudo apt install <package>
+19  sudo apt clean
+75  hostname -i
+76  id
+77  id -i
+78  id -a
+79  cmatrix
+80  whoami
+81  pwd
+82  cd
+83  ls
+
+5.Compare the working functionality of find and locate command. Which one is faster and why? 
+Ans:-             locate is faster than the find command 
+•	   Because it searches a pre-built database for file names and find command give live  file    system in real-time,it is more accurate and flexible
+•	Locate command was a simple name-based searches
+•	Locate command used for general searches
+•	Find command offers extensive options for searching by attributes
+
+
+6. Which command is used to modify file permissions in Linux? Give an example.
+Ans:-    chmod command used to modify the file permissions in linux
+        EXAMPLE:-
+                         Chmod  jeeva+rwe linux assignment.pdf
+                   Rwe means read,write,execute permission respectively
+                  + means adding a permission
+
+7.A file has permissions -rw -r- -r- -. What does this mean? 
+Ans:-  -rw read and write permission for the owner
+                   -r- ready only permission for the group members
+                   - no acess permissions for others
+
+8.Explain the difference between chown and chgrp with an example
+Ans:-        chown  :-
+•	It changes the user owner of  a directory
+•	Also used for change both the user owner and group owner simultaneously
+EXAMPLE:-
+                 chown alice myfile.txt
+                     IT MEANS    ownership changed to alice
+
+                          Chgrp   :-
+•	Changes only the group owner of a directory
+•	It is specific for the changing the group owner and not for user owner
+
+              EXAMPLE   :-
+                           chgrp sales report.pdf
+                   IT MEANS        changes the group owner of report.pdf to the sales group
+
+
+9. A file needs to be accessible by multiple users but only writable by the owner. How will you set permissions? 
+Ans:-     1. Create a shared group
+                          sudo groupadd members
+2.	Add users to that group
+3.	Change the file’s group    
+                sudo chown jeeva:members linux assignment.pdf
+4.	Set permissions
+	Like  rw-,r--,-r-,---,
+chomd 640 liunx assignment.pdf
+
+
+
+
+ 10.  How do you check the manual page for any Linux commands?   
+Ans:- man command followed by the name of the command you want to learn about
+•	This command will display a list of man pages whose descriptions contain the specified keyword, along with their section numbers.
+•	The man command is an indispensable tool for understanding and effectively utilizing the vast array of commands and functionalities available in a Linux environment.
+
+
+
+
+                                         LINUX ASSIGNMENT  3
+
+
+
+
+1.	Distinguish between man and whatis commands? Justify with proper example.
+
+Ans :-   man command:-
+•	It gives the manual page that contain the command name,detailed descripitions,related commands,options,exit status,etccc…
+•	It gives extensive and in depth documentation
+•	Used when kow about the command  functionality
+
+EXAMPLE:- $ man ls
+                        ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+                      Whatis command:-
+•	It shows the one line summary descrption of a command
+•	It is best for quick reading of overview from top to bottom
+•	Usage is equal to man -f
+                          EXAMPLE:-
+                                     ──(jeeva㉿kali)-[~]└─$ whatis ls 
+                                                                       ls (1)               - list directory contents 
+
+2.	Use the tee command to save the output of ls -l into a file while also displaying it
+Ans:-      ls -l | tee output.txt
+                                    Explinnation :-
+•	Ls -1  lists the content of the current directory in long format
+•	Then tee command simultensouly write the received output and also displayed it in the terminal
+
+
+3.	Explain with an example how the tee command can be used in logging. 
+
+Ans :-     ./assignment.sh | tee -a assignment.txt
+                       EXPLIAN:-
+•	Assignment .sh represents  the output if we want to capture and log
+•	|  represents the standard output of assignment.sh to the standard input of the tee command
+•	 Tee -a assignment.txt   tee  command takes the input it receives and writes it to both standard output  and the specified file 
+     
+                                           -a it append tee to output to assignment,txt  ( if already exists else tee will create it)
+
+
+
+4.	List the steps involved in installing Ubuntu 25.04 LTS on Oracle VirtualBox.
+Ans:-    1. Download the Ubuntu ISO 
+•	Go to the official Ubuntu website to download the latest Ubuntu 25.04 LTS ISO file. 
+2. Create a New Virtual Machine in VirtualBox 
+•	 click the New button.
+•	Enter a name for your virtual machine  and select a location to store its files.
+•	Assign a suitable amount of RAM  and create a virtual hard disk.
+•	Use the default settings for the virtual hard disk type  and allocation 
+3. Mount the Ubuntu ISO 
+•	 click Settings.
+•	 then click on the disk icon on the right to choose the downloaded Ubuntu ISO file. 
+5.	Start the Virtual Machine and Install Ubuntu 
+
+•	 click the Start button
+•	Select "Erase disk and install Ubuntu," which applies only to the virtual hard disk, not your host machine's disk.
+•	Create your user account by providing your name, a computer name, and a strong password.
+•	Wait for the installation to complete, and then restart the virtual machine when prompted.
+•	Enter your credentials to log in to your new Ubuntu 25.04 LTS system. 
+
+5.During Ubuntu OS installation, you face a Kernel Panic Error. How would you troubleshoot it?
+Ans:- 1. Use a Live Environment to Diagnose the Issue
+•	Boot from the Ubuntu Installation USB: Instead of continuing with the installation, choose the "Try Ubuntu without installing" option to enter the live environment. 
+2. Check for File System Errors 
+•	Identify Your Ubuntu Partition: Use sudo fdisk -l to list your disks and partitions. Identify the device name for your Ubuntu partition (
+•	Run fsck: Execute the command sudo fsck -f /dev/sdXX  which will check and repair the filesystem. 
+3. Consider Hardware and Configuration Issues
+•	BIOS/UEFI Settings:
+•	Disable Secure Boot: This can sometimes interfere with Linux installations.
+•	Check Disk Mode
+•	Corrupted Installation Media:
+•	Download a new ISO: Get a fresh copy of the Ubuntu ISO file.
+•	Rewrite the USB: Use a different utility to write the ISO to the USB drive. 
+4. Generate a New Initial RAM Disk (initramfs) 
+•	Update the initramfs: Run sudo update-initramfs -u -k all in the terminal of the live environment or within the chroot session to regenerate the initial RAM disk for all installed kernels. 
+
+
+6.Write the command to display the system’s hostname? How to change hostname using sysctl command?
+Ans:-        hostname
+
+                    To change the  hostname :-
+                                     sudo sysctl kernel.hostname="linux_best"
+
+7.Which command is used to show the calendar of the year 1984 with August month?
+Ans:-         this  command can be used   cal 8 1984 
+                         Shows the august month and year 1984 and cal is used for display a calendar
+8. Write a command to display system uptime and logged-in users together
+Ans :-  w command shows the syatem update and logged in users together
+
+9. Use the find command to list all “.c” files in /home/user.
+Ans :-   find /home/jeeva "*.c"
+                     find:  used to search for files and directories.
+
+
+10. How do you change file permissions to allow only the owner to read and write?
+
+Ans:-     chmod 700 assignment
+
+
+
+
+                                LINUX ASSIGNMENT 4
+ 
+
+
+
+1.A system has a file /etc/passwd. How would you use grep + tee to extract usernames and save them to a file while also displaying them on screen?
+
+Ans :-         grep -o '^[^:]+' /etc/passwd | tee jeeva.txt
+•	  grep -o '^[^:]+' /etc/passwd: this can  finds and prints only the usernames
+•	tee usernames.txt:  it saves the output to jeeva.txt and shows it on the screen at the same time
+
+
+2.A binary isn’t found in $PATH. How would you use commands (which, find, locate) to troubleshoot and fix the issue?
+Ans :-   firstly we need check the binary is indeed not in any of the directories in current $path by using this command       which <binary name>
+•	    The 2>/dev/null part suppresses error messages from directories you don't have permission to access. If find locates the binary, it will output its full path.this can be done by command name given by      find / -name <binary_name> 2>/dev/null
+•	Fixing the issue: by putting the command       
+                                          export PATH=$PATH:/path/to/binary/directory
+
+     3.Write a command pipeline that finds all .log files modified in the last 24 hours in /var/log and saves results into log_report.txt.
+Ans :-          find /var/log -type f -name "*.log" -mtime -1 > log_report.text
+•	 Find command intiated by specifying /var/log as the starting point of directory
+•	-type f command restricts only to search files not to directory
+•	-name “*.log”  this commamd includes only files end with .log extension
+•	-mtime -1 this command it based on the time based filtering
+•	>log_report.txt this command redirects the standard output of the find command to a new file named log_report.txt
+
+
+
+
+4.What is the difference between shutdown -r now and reboot?
+Ans :-  shutdown -r now   this command performs the greatfull shutsdown and then reboot                                
+                  Immediately
+•	it can be safer,perform as clean reboot 
+              
+                   reboot  :- it can be skip some shutdown steps depending on the system
+•	 It can be quicker but not gracefull or less gracefull     
+
+
+5.How can you use the tee command to debug a script that generates both standard output and error messages
+Ans :-  by redirecting both streams to a file while also displaying them on the terminal 
+                         linux.sh 2>&1 | tee debug_log.txt       
+•	 Linux.sh   represents the file we want debugging
+•	2>&1   it redirect the standard error messages to standard output
+•	|  give combined standard output and standard error message to the tee command
+•	Tee debug_log.txt   it reads the combined input and write into debug_log.txt,then display it on the terminal
+
+
+6.Explain any three real-world applications of Linux in industries.
+Ans:-
+ 1. Cybersecurity & Ethical Hacking
+•	use: Security professionals use Linux-based tools for penetration testing, vulnerability scanning, and forensic analysis.
+2. Film Production & Animation
+•	use: Studios use Linux for video editing, rendering, and animation due to its stability and performance
+3. Scientific Research & Supercomputing
+•	use: Most of the world’s supercomputers run Linux for simulations, data analysis, and complex calculations
+
+
+7.Differentiate application, system and utility software in the context of Linux environment
+Ans :-   application software :- it refer to  programs designed to perform specific tasks for the end user
+•	 user needs for specific tasks.
+•	Some of the examples like web browsers,image editors,development tools,etc….
+•	Runs on top of the operating system.
+
+
+System software :- it forms the foundation of the linux operating system
+   
+•	Manages hardware and core system operation
+•	 Needed for the system to the function
+•	 Works in the back ground
+
+
+Utilty software :- it consist of programs designed to assist in the maintenance, optimization, and management of the Linux system
+
+•	Helps with system maintence and management
+•	Not essential to run the system, but improves performance and usability.
+•	Usually run by system admins
+
+
+8. What are the key differences between open-source and proprietary operating systems
+Ans :-  open source operating system:-
+•	It openly available to the public,hence tt can be view ,modify,etc..
+•	Maintained  by community of devlopers rather than the single entity
+•	It is free to use
+•	It can give high degree of flexibility and custamization
+•	Ubantu and android is the best examples
+
+
+Proprietary operating system :-
+ 
+•	It is closely security code and not to public available
+•	It can be controlled by a specific company or a individual
+•	Iinvolving fees or subscriptions
+•	It provided by own company
+•	Windows and macOS are the best examples
+
+
+
+9.Write the command to display the system’s kernel version 
+Ans :-        uname -r	
+                       6.12.38+kali-amd64
+
+10.What is the difference between head and tail commands in text processing?
+Ans :-  head
+•	Display the beginning of a file
+•	It focuses on the start of the file
+•	It can be display by specific number of line by giving head -n from top
+          
+        Tail
+•	Display the end of a file
+•	It focuses on the end of the file
+•	It can be display by specific number of line by giving head -n from bottom
+
+
+
+
+
+                                               LINUX  ASSGNMENT 5
+
+
+
+
+
+
+1.What is a shell in Linux OS? How many categories of shell is currently exists in  linux? Why bash shell is very popular in Linux distribution? (CO2)
+Ans :-   it is a command line interpreter,providing an interface for users to interact with the the kernal and also it translate the human readable commands into instructions
+•	It acts as bridge between the user and the core of the system
+
+
+TWO CATEGORIES OF SHELL THEY ARE:-
+
+•	Command line interface shells :-some of shells like bash ,Zsh,Fish, provide a text based interface with the users and the system
+•	Graphical user interface shells :- shells like GNOME shell or KDE Plasma,offer a visual interface with icons,windows,menus for user interaction
+
+
+	 Bash means Bourne Again Shell it is the default shell in most linux distribution because
+•	Compatibility :- it highly compatible with its predecessor
+•	User friendly features :- command editing,command history,like wise…..
+•	Open source :- freely available no need to paying or subscribtions and also actively maintained
+•	Scripting capabilities :- allowing users to automate complex tasks and create custom             commands 
+
+
+2.What does the ls -Z command display?
+Ans:-   It is used to list files with their SELinux security context
+•	This command control who can access what on system with SELinux security
+
+
+3.Write a command to list all hidden files in the current directory.
+Ans:-   command   ls -d .*
+	.* ---- match all files starting with dot that are all hidden files
+	-d --- prevents the listing of  content of current  dir and parent dir
+
+
+4.Explain the difference between hard links and soft links (symbolic links) in Linux
+Ans : -       HARD LINKS :-
+•	It is a exact copy of a file
+•	It shares the same data on disk as the original file
+•	If I can delete the original file still hard disk can work
+•	It cannot cross the file system
+•	It cannot  link directories
+
+
+
+     SOFT LINKS(SYMBOLIC LINKS) :-
+
+•	It is shortcut to another file
+•	It can be points to path of original file not data
+•	If we delete the original file then soft links becomes broken
+•	It can cross the file system
+•	It can link the directories
+
+
+5.A file has permissions -rwxr-x--x. Explain who can read, write, and execute it
+Ans:-       -rwx:-
+•	r     owner can view the file contents
+•	w    owner can modify the file contents
+•	x     owner can run the file as a program
+
+
+   r-x :-
+
+•	r   users in the file group  can view the contents
+•	-  users in the group cannot modify the file
+•	X users in the group can run the file as a program
+
+
+--x:-
+
+•	-   the file group cannot view the contents
+•	-   others users cannot modify the file
+•	X  other users can run the file as a program
+
+
+6.Write the command to change the group ownership of a file data.txt to group staff.
+Ans:-    chgrp staff data.txt
+                   Changed to data.txt to staff by putting above command
+                  Only the file owner can be change group ownership
+
+7.Why is it dangerous to give 777 permissions to a file? Explain with an example
+Ans:- 
+•	 because it violates the principle of least privilege, which states that users should only have the minimum permissions necessary to perform their tasks
+•	modification by another users that process can introduce the error ,that leads to application  crashes
+•	if the program can excuted by another user that user can replace the legminate file with a harmfull program that leads to spread of malware
+EXAMPLE:-  
+           Consider a script called ass a famous.sh that upload our website
+The command  given by          chomd 777 famous.sh       
+•	  it can anyone can be edit and add malicious code or something else 
+•	rm -rf/ if in case if any user can run this command leading to major system damage 
+
+
+
+8. What is the difference between apropos (i.e., man -k) and whatis (i.e., man -f)?
+Ans:-       whatis     or     man -f
+•	it display the description of a command
+•	very essential for know about the exact name of the command
+•	it gives one line summary 
+command given by       whatis ls
+output given by         ls (1)               - list directory contents
+
+
+apropos       OR       man -k     
+•	 it can able to search the man pages of keywords
+•	It not essential if don’t about the exact command name
+•	It give short summary of the command
+
+Command given by            man -k
+Output given by         DESCRIPTION
+       COPY moves data between PostgreSQL tables and standard file-system files.  COPY TO copies the contents of a table to a file, while COPY FROM copies data from a file to a table (appending the data to whatever is in the table
+       already).  COPY TO can also copy the results of a SELECT query.
+
+       If a column list is specified, COPY TO copies only the data in the specified columns to the file. For COPY FROM, each field in the file is inserted, in order, into the specified column. Table columns not specified in the COPY
+       FROM column list will receive their default values.
+
+       COPY with a file name instructs the PostgreSQL server to directly read from or write to a file. The file must be accessible by the PostgreSQL user (the user ID the server runs as) and the name must be specified from the
+       viewpoint of the server. When PROGRAM is specified, the server executes the given command and reads from the standard output of the program, or writes to the standard input of the program. The command must be specified from the
+       viewpoint of the server, and be executable by the PostgreSQL user. When STDIN or STDOUT is specified, data is transmitted via the connection between the client and the server.
+
+       Each backend running COPY will report its progress in the pg_stat_progress_copy view. See Section 27.4.3 for details.
+
+       By default, COPY will fail if it encounters an error during processing. For use cases where a best-effort attempt at loading the entire file is desired, the ON_ERROR clause can be used to specify some other behavior.
+
+
+
+9. Write a command to redirect the error output of a command to a file named error.log.
+Ans:-   man -ls 2> error.log
+    EXPLAIN :-
+•	2>      it redirection operator and specifically standard error
+•	Error.log    it returns the error output will be written
+
+
+
+10.How can you use the tee command to append output to a file instead of overwriting it
+Ans:-      command | tee -a filename
+•	   -a can perform or acts like append to the file
+•	  tee will overwrite the file without -a
+
+
+
+
+                                   LINUX ASSIGNMENT - 6
+
+
+
+
+1.Which command is used to list the contents of a directory? Justify with proper example.
+Ans :-  that  command given by   ls 
+•	it is flexible with various options for more detailed listings
+   EXPLIAN:-
+ Ouput given by         Documents  Downloads  Music  Pictures  file.txt
+ This lists all visible files and folders in the current directory in columns or rows, depending     on terminal width
+
+2.Write the command to create a new directory named 123test_dir
+Ans :-   mkdir 123test_dir
+                    mkdir  means making directory
+
+3.What is the purpose of the sed command? Justify with proper example
+Ans:- it performs text transformation on files non interactively
+•	To search, find and replace, insert, delete, or edit text in a file or input stream
+•	  sed is a powerful tool for automated text editing
+•	  It is widely used in shell scripting, log processing, and data cleanup
+
+EXPLAIN :-
+         Command given by               sed 's/Hello/Hi/' file.txt
+                 output given by    Hi world  Hi user
+
+
+4.Which distinct command is used to display one-line descriptions of any command
+Ans:-   whatis ls is used to display one line descrpitions of any command
+
+5. Write the command to create an empty file named “notes.txt”.
+Ans:- touch notes.txt
+                Touch command is used for creating empty file
+
+6.Differentiate between grep and awk commands with an example.
+Ans:-  grep :-
+•	Specialized tool for searching text of patterns and printing lines that match those patterns
+•	It filters lines based on a pattern
+•	It is generally simpler to use for basic pattern matching tasks
+
+                  awk :- 
+•	It is a powerfull programming language depend for text processing ,reporting,data extraction, 
+•	Process by line by line by allowing each functions could be done based on ptterns
+•	Much more complexity and power than grep because this have programming lamguage features
+Consider a example famous.txt that contain
+                     Laptops 6
+                      Iphone  10
+                    Mac          3
+Example for grep :-
+      Input :-          	grep "Mac" famous.txt
+Output :-                      Mac 3
+
+Example for awk :-
+Input    :- awk '/iphone/ {print $2}' data.txt
+Output :-  10
+
+
+7.Write the command to give read, write, and execute permission to the owner of a file script.sh
+Ans:-                 chmod jeeva+rwx script.sh
+                                              + means adds permissions
+                                             rwx means  read,write,and excuete permisssions
+
+8.How is chown different from chgrp? Give one example for each.
+Ans:-  chown :-
+•	used to change the user owner of a file
+•	 It can also be used to change both the user owner and the group owner simultaneously
+EXAMPLE :-
+COMMAND ------                    chown jeeva:hackers famous.txt
+        to change the owner of famous.txt to jeeva and its hackers
+
+                          chgrp:-
+•	Specfically used to change only the group owner of a file
+EXAMPLE :- 
+COMMAND ------                 chgrp hackers famous.pdf  
+  To change only the group owner of a file named famous.pdf to hackers
+
+9.A user complains that they cannot execute a file even though it exists in their directory. How would you troubleshoot this using ls -l, chmod, and whoami?
+Ans :- 
+•	first we need to check file permissions  by putting command ls -l filename and see in output there is a x in permissions if missing then no execute rights
+•	if missing then add this command  chomd +x filename
+•	all the steps done then write whoami then compare with file owner
+
+
+10.Design a command pipeline to: find all .log files modified in the last 2 days in /var/log, display them on screen, and save the results into a file recent_logs.txt using tee command
+Ans:-      command  ----    find /var/log -type f -name "*.log" -mtime -2 | tee recent_logs.txt
+            Find/var/log ==== it intiate the search starting from /var/log/ directory
+            -type f ==== only consider regular files in the search not other file types
+             -name “*.log”==== act like filter that filter the files that end with .log
+             -mtime  -2==== this also filter the files less than 2 days ago 
+                 |  === redirect the standard output of the find command as the standard input to the tee command  
+              tee recent_logs.txt: The tee command takes the input from the pipe, displays it on standard output and simultaneously writes it to the specified file, recent_logs.txt.
+
+
+
+
+
+
+                              LINUX ASSIGNMENT  7
+
+
+
+
+
+1.	What is a bash shell script? Give one example
+Ans :- it is a plain text file containing a sequence of commands that are exuceted by bash    
+                    Interpreter
+          EXAMPLE:-            #!/bin/bash
+                              
+                          echo  “ linux hackers”
+
+2.	Write a simple shell script to print “Hello World”.
+Ans :-  
+•	 by creating a file using text editor and code given by    nano linux.sh
+•	then inside the linux.sh add the code given by                 #!/bin/bash
+                                                                                                            echo "Hello World"
+•	give the permission for script excecutable by command given by       chmod +x linux.sh
+•	then run by using     ./linux.sh   or   bash linux.sh
+•	output will be the “Hello World”
+
+
+
+3.	What is the purpose of comments (#) in a shell script?
+Ans :-  
+•	It provide human readable explain and documentation with in the code
+•	It make the script easier to understand for everyone 
+•	Well commented code is siginificantly easier to maintain
+•	Comments clarify the existing functionality
+
+
+
+4.How do you declare variables (int, float, double, string, Boolean, and char in a shell script?
+Ans :-    integer variable declare by int = 14
+•	        Float/Double variable declare by float = 14.26
+•	        String variable declare by string = “ jeeva”
+•	        Boolean variable declare by  Boolean = true 
+•	        Char variable declare by char = “ j”
+
+EXPLIAN IN CODE GIVEN BY
+                                                              #!/bin/bash
+
+                                                               Int = 14
+                                                               float = 10.26
+                                                               string = "jeeva "
+                                                                boolean = true
+                                                                char = "j"
+
+                                                                                    echo "Integer: $int"
+                                                                     echo "Float: $float"
+                                                                    echo "String: $string"
+                                                                    echo "Boolean: $boolean"
+                                                                   echo "Character: $char"
+
+5.Write a shell script to display the current date and time of the system.
+Ans :-    echo "Current Date and Time: $(date)"
+
+
+6.Explain the difference between a constant and a variable in bash script.
+Ans:-    constant :-
+•	It cannot be changed
+•	Declare by giving declare -r
+•	It have fixed values
+•	It have fixed settings like limits,mathematical constants,etc.. it can cause errors to change it
+       
+Example         declare  PI=3.14
+
+
+Variable:- 
+
+•	It can be changed
+•	Decalred by var = 19
+•	It has dynamic values
+•	It does not have any fixed settings and also it can be change anytime if we want 
+
+Example     #!/bin/bash
+
+                    name="linux"
+                    echo "Name is $name"
+
+                    name="jeeva"
+                    echo "Name is now $name"
+
+
+7.Write a shell script to read two integer number from the user and compute thesum of both the number
+Ans :-   #!/bin/bash
+                      echo "Enter the first number:"
+                     read number 1
+                     echo "Enter the second number:"
+                     read number 2
+                      sum=$((number 1 + number 2))
+                    echo "The sum of $number 1 and $number 2 is: $sum"
+
+
+8.What is the use of source command in shell scripting?
+Ans:- it can be represented by single dot used to execute the commands within a specified file in the current shell environment
+•	Commonly used in load configuration files 
+•	It can be sharing variables and functions
+•	Also activate the virtual environments
+•	Integrates the contents directly into current shell
+
+9.How can you debug a shell script? Give two methods.
+Ans:-   debugging  a shell script by comman two methods are there given by one is set -x command for execution tracing and other is echo  statements for variable inspection and flow tracking
+     set -x   
+EXAMPLE :-
+    #!/bin/bash
+    set -x 
+    VAR="linux"
+    echo "$VAR World"
+    ls -l /tmp
+
+echo 
+EXAMPLE :-
+        #!/bin/bash
+Name = “linux”
+echo “debug: name is $name”
+
+10.Write a bash script to create and delete a file.
+Ans:-    #!/bin/bash
+filename="my_test_file.txt"
+echo "Creating file: $filename"
+touch "$filename”
+if [ -f "$filename" ]; then
+    echo "File '$filename' created successfully."
+else
+    echo "Error: Failed to create file '$filename'."
+    exit 1
+fi
+echo "This is some content for the test file." > "$filename"
+echo "Deleting file: $filename"
+rm "$filename"
+if [ ! -f "$filename" ]; then
+    echo "File '$filename' deleted successfully."
+else
+    echo "Error: Failed to delete file '$filename'."
+    exit 1
+fi
+
+echo "Script finished."
+
+
+
+
+
+                              LINUX ASSIGNMENT  8
+
+
+
+
+1.	What is a user-defined function in shell scripting? Explain with an example
+Ans :-  it is a block of code within a script that performs a specific task and can be multiple times called
+•	Promotes moularity,reusability and easier to maintain
+
+EXAMPLE :-
+#!/bin/bash
+Display linux() {
+    echo "Welcome to hackers group!"
+    echo "I will hack your system."
+}
+Calculate square() {
+    local number = $1 
+    square = $((number * number))
+    echo "The square of $number is: $square"
+}
+Display linux
+echo "" 
+
+read -p "Enter a number to calculate its square: " user_input
+calculate_square "$user_input"
+
+
+2.Write a bash script with a function that multiply two integer numbers.
+Ans :-   #!/bin/bash
+multiply kings() {
+  local number 1=$1
+  local number 2=$2
+  local result=$((number 1 * number 2))
+  echo "The product of $num1 and $num2 is: $result"
+)
+echo "Enter the first integer:"
+read input1
+echo "Enter the second integer:"
+read input2
+multiply kings "$input1" "$input2"
+
+3.Explain how arrays (1D, 2D, and 3D) are declared in bash scripting.
+Ans :-    1D 
+•	Bash supports 1d arrays directly
+•	Declare by arr = (“2,4,6”)
+•	Accesed by index
+EXAMPLE :- 
+ fruits=("apple" "banana" "cherry")
+echo "${fruits[0]}"  
+output will be given by apple
+
+  2D
+•	Bash does not support for 2d
+•	Uses pairs in associative array
+
+EXAMPLE :- 
+               declare -A matrix
+matrix[0,0]="A"
+matrix[0,1]="B"
+echo "${matrix[0,1]}" 
+3D
+•	It associative with keys like x,y,z
+EXAMPLE :- 
+  declare -A cube
+cube[0,0,0]="X"
+cube[0,0,1]="Y"
+echo "${cube[0,0,1]}" 
+
+4.Write a shell script to display elements of an array
+Ans :-   #!/bin/bash
+                    Fruits = ("apple" "banana" "cherry")
+                    echo "All elements: ${fruits[@]}"
+
+5. What is the purpose of cron in Linux?
+Ans :-       
+•	It is a time based job schedular in linuxx
+•	Autometcally run scripts or command specific intervals
+•	Run scripts daily ,weekly,monthly,and even for minute also it could be run
+•	Reducing manual work in linux systems
+•	Sending automated email reports
+•	Updating software packages
+•	Perform regular system maintenance
+
+
+6. Write a cron job to run a backup script every day at midnight.
+Ans :-         0 0 * * * /path/to/your/backup-script.sh
+•	0 0 means it is at 12 am 
+•	* * * means every day ,every month
+•	/path/to/your/backup-script.sh means replace the full path of the script
+
+
+7.How do you schedule a one-time job using at command?
+Ans :-   we need to check the at is installed or not in our system and fix this problem by putting command  sudo apt install at  then start with  sudo systemctl start atd this command and schedule your job by putting  echo "/home/jeeva/backup.sh" | at time  this command and give  what command if u want at the echo after
+EXAMPLE :-     at 10:30 PM
+
+
+
+8. Write a script to display disk usage using df and du.
+Ans :-  #!/bin/bash
+echo "--- Filesystem Disk Space Usage (df) ---"
+df -h
+echo -e "\n--- Disk Usage by Top 10 Largest Directories (du) ---"
+sudo du -shx /* 2>/dev/null | sort -rh | head -n 10
+
+9.How can you log the output of a script using the tee command?
+Ans :-    linux.sh | tee hackers.log
+                   Linux.sh executes and its standard output is piped in tee command that displays the standard output in display and simultanseuly writes into hackers.log     
+                  
+                    linux.sh | tee -a hackers.log
+     same as above but -a command append with tee
+
+
+10.Explain with an example how shell scripting can automate system administration tasks
+Ans :-      I consider example of disk usage alert script
+•	Firstly send a email alert if your disk is more than the 80 % full
+•	Run it every hour by using cron schedular
+#!/bin/bash
+USAGE=$(df / | grep / | awk '{print $5}' | sed 's/%//')
+if [ "$USAGE" -ge 80 ]; then
+  echo "Disk is ${USAGE}% full!" | mail -s "Disk Alert" admin@example.com
+fi
+•	This command check how full your disk is and if it is 80% more then it sends the an email warning
+•	It is simple to write using basic linux commands
+•	No need for manual checks it runs in the background
+•	It prevents the crashes and helps to catch the problem early.
+
+
+
+
+                                    LINUX ASSGNMENT    9   
+
+
+
+
+
+1.Write a shell script using if…else to check if a number is even or odd
+Ans:-   #!/bin/bash
+                   echo "Enter a number:"
+                   read number 
+                   if (( number % 2 == 0 )); then
+                  echo "$number is an even number."
+                 else
+                   echo "$number is an odd number."
+                    Fi
+
+2.Explain the difference between if and case statements in bash
+Ans
+Ans:-   if statement :- 
+•	It evaluate the condtional expression 
+•	It is suited for conditions that evaluate true or false
+•	It allows wide range of conditional statements 
+•	It also include numerical comoparsion
+Example         if condition1; then
+                             # commands if condition1 is true
+                             elif condition2; then
+                            # commands if condition2 is true
+                       else
+                         # commands if no condition is true
+                           Fi
+Case statement:-
+•	It matches the single value that against the multiple patterns and execute with respect to the matching pattern
+•	Supports glob patterns for more flexible matching
+Example        case expression in
+                                    pattern1)
+                         # commands if expression matches pattern1
+                                  ;;
+                             pattern2|pattern3)
+                            # commands if expression matches pattern2 or pattern3
+                                  ;;
+                                   *)
+                             # commands if no other pattern matches (default case)
+                                     ;;
+                                Esac
+
+3.Write a script to find the largest of three numbers entered by the user.
+Ans :-   def find_largest_of_three():
+    try:
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
+        num3 = float(input("Enter the third number: "))
+
+        if num1 >= num2 and num1 >= num3:
+            largest = num1
+        elif num2 >= num1 and num2 >= num3:
+            largest = num2
+        else:
+            largest = num3
+
+        print(f"The largest number is: {largest}")
+
+    except ValueError:
+        print("Invalid input. Please enter valid numbers.")
+
+if __name__ == "__main__":
+    find_largest_of_three()
+
+
+                                   
+4. do you use a for loop to traverse an array in bash? Give an example. The array is defined as arr=(123, “Abs”, -2.3, ‘A’, 23.56, 0).
+Ans :- yes we can use for multiple porposes
+EXAMPLE:- 
+         arr=(123 "Abs" -2.3 'A' 23.56 0)
+
+          for item in "${arr[@]}"
+     do
+               echo "$item"
+      done
+
+
+5. Write a shell script to loop through all files in the current directory and display their names
+Ans :-  #!/bin/bash
+for file in *
+do
+  if [ -f "$file" ]; then
+    echo "$file"
+  fi
+done
+6. What is the difference between while and until loops in bash?
+Ans :-  while loop :-
+•	Runs while the condition is true 
+•	Stop at condtion when the condition is false
+•	It good for unknown loop counts
+•	Often used to read input line by ;ine
+
+
+
+Until loop :- 
+
+•	Runs as long as the condition true
+•	Condition is checked before the first run
+•	Usefull for retry logic or wait for condition
+•	Must be carefull with update something inside the loop
+
+
+7.Write a countdown timer script using a while loop
+Ans :-    #!/bin/bash
+                            COUNTDOWN_SECONDS=10   
+                         echo "Starting countdown from $COUNTDOWN_SECONDS seconds..."
+                          while [ $COUNTDOWN_SECONDS -gt 0 ]; do
+                             echo "$COUNTDOWN_SECONDS..."
+                          sleep 1 # Wait for 1 second
+                          ((COUNTDOWN_SECONDS--)) # Decrement the countdown value
+                            done
+                              echo "Countdown complete!"
+
+8.How do you use break and continue statements in loops? Give examples
+Ans :-   break statement :-
+•	Stops the loop completely and exists
+•	Use when we want to early exit 
+EXAMPLE :-
+                    for i in {1..5}
+do
+  if [ $i -eq 3 ]; then
+    echo "Breaking at $i"
+    break
+  fi
+  echo "Number: $i"
+done
+
+
+continue ststement :-
+
+•	Skips the rest of the current loop iteration and goes to next one
+•	Use when we want to skip the cases
+
+EXAMPLE:-
+
+for i in {1..5}
+do
+  if [ $i -eq 3 ]; then
+    echo "Skipping $i"
+    continue
+  fi
+  echo "Number: $i"
+done
+
+
+9.Write a script to check if a file exists or not using the if and else loop
+Ans :-     #!/bin/bash
+echo "Enter the filename:"
+read filename
+if [ -f "$filename" ]; then
+  echo "File '$filename' exists."
+else
+  echo "File '$filename' does not exist."
+Fi
+
+10.Write a script to calculate factorial of a number using for loop
+Ans :-  #!/bin/bash
+                    echo "Enter a number:"
+                     read num
+                        factorial=1
+                         for (( i=1; i<=num; i++ ))
+                          do
+                          factorial=$((factorial * i))
+                         done
+                            echo "Factorial of $num is $factorial"
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
